@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title> bai 3</title>
+    </head>
+    <body>
+       <!--ol danh sách có thứ tự -->
+       <ol>
+        <li>C#</li>
+        <li>Java</li>
+        <li>Python</li>
+       </ol>
+       <!--ul danh sách không có thứ tự -->
+       <ul>
+        <li>C#</li>
+        <li>Java</li>
+        <li>Python</li>
+       </ul>
+       <h1>Form đăng ký</h1>
+       <form>
+        <div>
+            <b> Họ và tên </b><br>
+            <!--nếu input khônng có type thì sẽ -->
+            <!--mặc định là text -->
+            <!--thuộc tình readonly sử dụng khi -->
+            <!--không muốn người dùng nhập  -->
+            <!--thông tin vào input -->
+            <input type="text" placeholder="họ và tên">
+        </div>
+        <div>
+            <b>năm sinh</b><br>
+            <input type="number" placeholder="năm sinh">
+        </div>
+        <div>
+            <b>mật khẩu</b><br>
+            <input type="password" placeholder="mật khẩu">
+        </div>
+        <div>   
+            <b>giới thiệu về bản thân</b><br>
+            <textarea>nhập thông tin...</textarea>
+        </div>
+        <div>
+            <b>Email<b><br>
+            <input type="email">
+        </div>
+        <div>
+            <!-- số đầu tiên: 0 -->
+             <!-- số thứ 2: 3,9,8-->
+              <!-- số thứ 3: 0-9 -->
+            <b>số điện thoại</b><br>
+            <input type="tel"pattern="([0-9]{1}(0-9]{1})([0-9]{8}))">
+            </div>
+            <div>  
+                <b>giới tính</b><br>
+                <input type="radio" name="gioitinh" value="nam">Nam <br>
+                <input type="radio" name="gioitinh" value="nu">Nữ  <br>
+            </div>
+            <div>
+                <b>sở thích </b><br>
+                chơi game:<input type="checkbox" name="sothich" value="choigame"> <br>
+                nghe nhạc:<input type="checkbox" name="sothich" value="nghenhac"> <br>
+                thể thao:<input type="checkbox" name="sothich" value="thethao"> <br>
+            </div>
+            <div>
+                <b>trình duyệt web ưa thích</b><br>
+                <select name="browsers">
+                    <option value="internet explorer">internet explorer</option>
+                    <option value="firefox">firefox</option>
+                    <option value="chrome">chrome</option>
+                    <option value="opera">opera</option>
+                    <option value="safari">safari</option>
+                    <option value="cốc cốc ">cốc cốc </option>
+                </select>  
+                <!--0 <input type="range" id="a" value="50" 100>--> 
+            </div>
+
+        <div>
+            <input type="submit">
+            <button>xác nhận</button>
+            <input type="reset">
+        </div>
+       </form>
+       <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ewSWV7-_Z-Y?si=0P0CjM4zaccNTxyN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       </div>
+       <div>
+        <video controls with="560" height=""315">
+            <source src="../anh/video.mp4" type="video/mp4">
+        </video>
+       </div>
+       <div>
+        <audio controls>
+            <source src="../anh/audio.mp4" type="audio/mp4">
+        </audio>
+       </div>
+    </body>
+</html>
