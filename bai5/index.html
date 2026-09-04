@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Style</title>
+        <style>
+            h2{
+                color:pink;
+                background-color:black
+            }
+        </style>
+        <style>
+            .khoi-1{
+                background-color:red;
+            }
+            .khoi-2{
+                background-color:green;
+                margin:50px 20px 100px 80px;
+                /* giá trị thì sẽ cách xung quanh = giá trị đó */
+                /*4 giá trị: giá trị đầu(trên); giá trị 2(phải); giá trị 3(dưới); giá trị 4(trái)*/
+                /* 2 giá trị: giá trị đầu(trên,dưới); giá trị 2(trái,phải) */
+            }
+            .khoi-3{
+                background-color:yellow;
+                padding: 30px 40px 80px 90px;
+                display:flex;
+                justify-content:flex-end;
+                /*4 giá trị: giá trị đầu(trên); giá trị 2(phải); giá trị 3(dưới); giá trị 4(trái)*/
+                /* 2 giá trị: giá trị đầu(trên,dưới); giá trị 2(trái,phải) */
+            }
+        </style>
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        <!--Cach 1-->
+        <h1 style='color:blue;background-color:yellow'>Nguyen Duc Duong</h1>
+        <!--Cach 2-->
+        <h2>Nguyễn Đức Dương</h2>
+        <!--Cach 3-->
+        <h3>nguyễn đức dương</h3>
+        <!--Cach 4: trỏ đến các thuộc tính: id hoặc class-->
+        <!--Nếu là id sử dụng dấu # + tên id-->
+        <h4 id="tieude-1">Web 2</h4>
+        <!--Nếu là class sử dụng dấu . + tên class-->
+        <h5 class="tieude-2">Web 3</h5>
+        <!--element.class: kết hợp thẻ + tên class-->
+        <div>Web 4</div>
+        <div class='Web4'>Web 4</div>
+            <!--3 thuộc tính của css-->
+            <!--Margin: Khoảng cách đối tượng xung quanh nó-->
+            <!--Padding: Khoảng cách bên trong của thẻ-->
+            <!--Display: Cách hiển thị của thẻ: inline, block, none-->
+            <div class="khoi-1">Khối 1</div>
+            <div class="khoi-2">Khối 2</div>
+            <div class="khoi-3">Khối 3</div>
+        </div>
+        <div>
+            <!--#pond{
+            display:flex(linh hoạt);
+
+            justtify-content(theo chiều ngang):flex-start(bên trái)
+            justify-content:center (giữa)
+            justify-content:flex-end (sang phải)
+            justify-content:space-between (phân bố đều)
+            justify-content:space-around (phân bố đều với khoảng cách xung quanh/xung quanh bằng 1 nửa ở giữa)
+            
+            alige-items(theo chiều dọc):flex-start (bên trên)
+            alige-items:center (giữa)
+            alige-items:flex-end (bên dưới)
+            alige-items:stretch (kéo dài)
+            alige-items:baseline (căn theo đường cơ sở)
+            alige-items:flex-start (bên trên)
+            alige-items:flex-end (bên dưới)
+            -->
+        </div>
+    </body>
+</html>
