@@ -1,0 +1,173 @@
+.menu{
+    background-color: #2fa4e7;
+}
+
+.danh-sach-muc{
+    list-style: none;
+    margin: 0px;
+    display:flex;
+    padding: 5px;
+    gap: 15px;
+}
+.muc{
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.danh-muc{
+    text-decoration: none;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: #2fa4e7;
+}
+
+main{
+    display: flex;
+}
+.ben-trai{
+    /* background-color: green; */
+    width: 17%;
+    height: 170vh;
+    border-right: 2px solid #2fa4e7;
+    margin: 0px auto;
+}
+
+.trang-chu{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    gap: 10px;
+
+}
+
+hr{
+    width: 95%;
+    margin: 0px auto;
+    border: 0.1px solid #1187cb;
+}
+.thong-tin{
+    color:#2fa4e7;
+    padding: 15px 0px;
+}
+
+.dang-chon{
+    background-color:#a8d8f4;
+}
+
+.thong-tin:hover{
+    background-color: #dedede;
+}
+.cuoi-trang{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+    /* background-color: yellow; */
+}
+.anh{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.noi-dung{
+    width: 70%;
+    height: 90px;
+    
+}
+
+img{
+    width: 95%;
+    margin-top: 100px;
+}
+.ben-phai{
+    /* background-color: blue; */
+    width: 83%;
+    height: 120vh; 
+}
+
+p{
+    margin: 0px auto;
+}
+.xem-tiep{
+    margin: 0px;
+}
+.tin{
+    width: 98%;
+    height: 195vh;
+    border: 1px solid #2fa4e7;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+h4{
+    margin: 0px;
+}
+.tin-dau{
+    width: 98%;
+    margin: auto;
+    border-bottom: 1px solid #2fa4e7;
+    padding: 5px;
+    color: #666565;
+    /* background-color: yellow;     */
+}
+select{
+    font-size: 16px;
+    padding: 5px 10px;
+    height: auto;
+    border-radius: 7px;
+    border: 1px solid #c9c9c9;
+    color: grey;
+}
+table{
+    border-radius: 5px;
+    border: 1.5px solid #2fa4e7;
+    width: 100%;
+}
+td{
+    border: 0.1px solid #dedede;
+}
+th{
+    border: 0.1px solid #dedede;
+}
+.thoi-khoa-bieu{
+    /* background-color: blue; */
+    margin: 0px;
+    gap: 10px;
+    padding: 7px;
+    /* color:#666565; */
+    display: flex;
+}
+
+.gio-hoc{
+    width:98%;
+    margin: 15px auto;
+    padding: 0;
+    /* border: 1px solid #2fa4e7;
+    border-radius: 5px; */
+    /* background-color: red; */
+}
+.tkb{
+    width: 98%;
+    margin: 0px auto;
+    /* background-color:yellow; */
+}
+
+.mon-hoc{
+    background-color: #cfe2ff;
+    border: 2px solid #2fa4e7;
+}
+
+.tiet-hoc{
+    background-color: #2fa4e7;
+    color: white;
+}
+
+.ngay-hoc{
+    width: 20vh;
+    margin: 0px auto;
+    padding: 2px;
+}
