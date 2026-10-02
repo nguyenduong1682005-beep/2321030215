@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7 - JavaScript</title>
+</head>
+<body>
+    <!-- Internal JavaScript -->
+    <script>
+        // có thể thêm mã nguồn html vào trong JS
+        // lưu ý: html phải đặt trong cặp dấu ""
+        document.writeln("Hello <br> World!");
+        //1 biến chỉ khai báo 1 kiểu dữ liệu
+        var tenSinhVien = "duong dep trai";
+        var tuoi = 21;
+        document.writeln(tenSinhVien + "<br>" + tuoi + "<br>");
+
+        var soThuNhat = 10;
+        var soThuHai = 5;
+        // + - * / 
+        // % chia lấy phần dư
+        var ketQua = soThuNhat + soThuHai;
+        document.writeln("Kết quả là:" + ketQua + "<br>");
+        var ketQua = soThuNhat - soThuHai;
+        document.writeln("Kết quả là:" + ketQua + "<br>");
+        var ketQua = soThuNhat * soThuHai;
+        document.writeln("Kết quả là:" + ketQua + "<br>");
+        var ketQua = soThuNhat / soThuHai;
+        document.writeln("Kết quả là:" + ketQua + "<br>");
+        var ketQua = soThuNhat % soThuHai;
+        document.writeln("Kết quả là:" + ketQua + "<br>");
+        // ++: tăng 1 đvi, --: giảm 1 đơn vị
+        document.writeln(++ soThuNhat);
+        document.writeln(-- soThuNhat + "<br>");
+
+        // tương đương: soThuNhat = soThuNhat + soThuHai
+        soThuNhat+=soThuHai;
+        document.writeln(soThuNhat + "<br>");
+        // tương đương: soThuNhat = soThuNhat - soThuHai
+        soThuNhat-=soThuHai;
+        document.writeln(soThuNhat + "<br>");
+        // tương đương: soThuNhat = soThuNhat  soThuHai
+        soThuNhat*=soThuHai;
+        document.writeln(soThuNhat + "<br>");
+        // tương đương: soThuNhat = soThuNhat / soThuHai
+        soThuNhat/=soThuHai;
+        document.writeln(soThuNhat + "<br>");
+
+        // kiểu dữ liệu: string, number:số
+        // boolean (true/false)
+        var a = "10";
+        var b = "5.5";
+        // chuyển string sang number dùng hàm parseInt():số nguyên hoặc parseFloat():số thực
+        var tong = parseInt(a) + parseFloat(b);
+        document.writeln(tong);
+
+        // String
+        document.writeln("<br>");
+        // kiểm tra độ dài chuỗi dùng: length
+        document.writeln(tenSinhVien.length);
+
+        // nối chuỗi +
+
+        // var tenSinhVien = "duong dep trai";
+        // kiểm tra tồn tại
+        // indexOf tìm vị trí xuất hiện đầu tiên của ký tự trong chuỗi, nếu không tồn tại trả về -1; chữ đầu tiên sẽ là 0, chữ thứ 2 là 1, ...
+        document.writeln("<br>");
+        document.writeln(tenSinhVien.indexOf("u"));
+        // includes kiểm tra xem từ có tồn tại trong chuỗi hay không, nếu có trả về true, nếu không trả về false
+        document.writeln("<br>");
+        document.writeln(tenSinhVien.includes("u") + "<br>"); //có: true
+        document.writeln(tenSinhVien.includes("a")); //không: false
+
+        // replace: thay thế chuỗi
+        document.writeln("<br>");
+        tenSinhVien = tenSinhVien.replace("duong", "duc"); //thay thế từ "duong" bằng "duc"
+        document.writeln(tenSinhVien);
+
+        //kiểm tra ký tự bắt đầu
+        //startsWith: kiểm tra xem chuỗi có bắt đầu bằng ký tự hay không, nếu có trả về true, nếu không trả về false
+        document.writeln("<br>");
+        document.writeln(tenSinhVien.startsWith("duc") + "<br>"); //false: chuỗi không bắt đầu bằng "duc"
+        document.writeln(tenSinhVien.startsWith("duong") + "<br>"); //true: chuỗi bắt đầu bằng "duong"
+
+        //viết in hoa
+        document.writeln("<br>");
+        document.writeln(tenSinhVien.toUpperCase());
+        //viết in thường
+        document.writeln("<br>");
+        document.writeln(tenSinhVien.toLowerCase());
+
+        // Number
+        // kiểm tra dữ liệu có phải số hay không
+        document.writeln("<br>");
+        document.writeln(isNaN("abc") + "<br>"); //true: abc không phải là số
+        document.writeln(isNaN("123") + "<br>"); //false: 123 là số
+
+        //Date
+        var homNay = new Date();
+        document.writeln("<br>");
+        document.writeln(homNay);
+
+        //Khai báo cụ thể định dạng tháng/ngày/năm
+        var ngay = new Date("10-14-2026");
+        document.writeln("<br>");
+        document.writeln(ngay);
+
+        //lấy năm
+        var nam = homNay.getFullYear();
+        document.writeln("<br>");
+        document.writeln(nam);
+
+        //lấy tháng
+        var thang = homNay.getMonth() + 1; //tháng bắt đầu từ 0, nên cần cộng thêm 1
+        document.writeln("<br>");
+        document.writeln(thang);
+
+        //lấy ngày
+        var ngay = homNay.getDate();
+        document.writeln("<br>");
+        document.writeln(ngay);
+        //lấy thứ
+        var thu = homNay.getDay() + 1; //chủ nhật= 0, nên cần cộng thêm 1
+        document.writeln("<br>");
+        document.writeln(thu);
+
+        var nanSinhduong = nam - tuoi;
+        document.writeln("<br>");
+        document.writeln("Năm sinh của duong là: " + nanSinhduong);
+
+        //mảng (array): khai báo mảng dùng [];  1 mảng có thể chứa nhiều kiểu dữ liệu khác nhau
+        var mangSo = [1,2,3,4,5]; //vị trí đầu tiên là 0, vị trí thứ 2 là 1, ...
+        var mangTen = ["duong", "duc", "nguyen", "tuan"];
+        var thongTin = ["duong", 21, "Ha Noi", false];
+
+        document.writeln("<br>");
+        document.writeln(mangSo[2]); //lấy phần tử ở vị trí 2 của mảng mangSo
+        document.writeln("<br>");
+        document.writeln(mangTen[1]); //lấy phần tử ở vị trí 1 của mảng mangTen
+        document.writeln("<br>");
+        document.writeln(thongTin[0]); //lấy phần tử ở vị trí 0 của mảng thongTin
+
+        //kiểm tra đọ dài của mảng: kh tính dấu cách và dấu ,
+        document.writeln("<br>");
+        document.writeln(mangSo.length +"<br>"); //độ dài của mảng mangSo
+
+        //gộp mảng: concat
+        var mang = mangSo.concat(mangTen, thongTin); //nối mảng mangSo, mangTen và thongTin thành 1 mảng mới
+        document.writeln("<br>");
+        document.writeln(mang);
+
+        //join: chuyển mảng thành 1 chuỗi string, có thể thay đổi ký tự phân cách giữa các phần tử của mảng
+        document.writeln("<br>");
+        document.writeln(mangSo.join(" / ") +"<br>");
+
+        //pop: lấy ra số cuối cùng còn lại xóa bỏ)
+        document.writeln("<br>");
+        document.writeln(mangSo.pop());
+
+        //pust: thêm phần tử vào cuối mảng
+        document.writeln("<br>");
+        mangSo.push(6);
+        document.writeln(mangSo); //mảng mangSo sau khi thêm phần tử 6 vào cuối mảng, sẽ chỉ có 1,2,3,4,6 (do số 5 bị xóa đi bởi pop)
+
+        //reverse: đảo chiều của mảng
+        document.writeln("<br>");
+        document.writeln(mangSo.reverse() +"<br>"); //đảo ngược
+
+        var soThuBa = 6;
+        var soThuTu = 7;
+        document.writeln("<br>");
+        document.writeln(soThuBa == soThuTu + "<br>"); //false: 6 khác 7; ==: so sánh bằng
+        document.writeln(soThuBa != soThuTu + "<br>"); //true: 6 khác 7; !=: khác nhau
+        document.writeln(soThuBa > 6 + "<br>"); //false: 6 không lớn hơn 6; >: lớn hơn
+        document.writeln(soThuBa < 6 + "<br>"); //false: 6 không nhỏ hơn 6; <: nhỏ hơn
+        document.writeln(soThuBa >= 6 + "<br>"); //true: 6 lớn hơn hoặc bằng 6; >=: lớn hơn hoặc bằng
+        document.writeln(soThuBa <= 6 + "<br>"); //true: 6 nhỏ hơn hoặc bằng 6; <=: nhỏ hơn hoặc bằng
+
+        //var soThuNhat = 10;
+        //var soThuHai = 5;
+        var c = 10;
+        var d = 5.5;
+        //&&: và: đúng 2 điều kiện thì kết quả là đúng, sai 1 trong 2 điều kiện thì kết quả là sai
+        //true = true + true
+        // false = true + false
+        // false = false
+        document.writeln("<br>");
+        document.writeln((soThuBa > soThuTu) && (c < d) + "<br>"); //false: 6 > 7 và 10 < 5.5
+        document.writeln((soThuBa > soThuTu) && (c > d) + "<br>"); //true: 6 > 7 và 10 > 5.5
+
+        //true || false: hoặc: đúng 1 trong 2 điều kiện là đúng thì kết quả là đúng
+        document.writeln("<br>");
+        document.writeln((soThuBa > soThuTu) || (c < d) + "<br>"); //false: 6 > 7 hoăc 10 < 5.5
+        document.writeln((soThuBa > soThuTu) || (c > d) + "<br>"); //true: 6 > 7 hoặc 10 > 5.5
+
+        //var thu = homNay.getDay();
+        document.writeln(thu);
+        if(thu == 0){
+            document.writeln("Hôm nay là chủ nhật");
+            } 
+        else{
+            document.writeln("Hôm nay không phải là chủ nhật" + "<br>");
+        }
+        //0-4: F
+        //4-5: D
+        //5-7: C
+        //7-8: B
+        //8-10: A
+        var diem = 8;
+        document.writeln(diem + "<br>");
+        if(diem < 4){
+            document.writeln("Bạn qua môn");
+        }
+        else{
+            document.writeln("Bạn rớt môn" + "<br>");
+        }
+
+
+        if(diem >= 0 && diem < 4){
+            document.writeln("Bạn đạt loại F");
+        }
+        else if(diem >= 4 && diem < 5){
+            document.writeln("Bạn đạt loại D");
+        }
+        else if(diem >= 5 && diem < 7){
+            document.writeln("Bạn đạt loại C");
+        }
+        else if (diem >= 7 && diem < 8){
+            document.writeln("Bạn đạt loại B");
+        }
+        else if(diem >= 8 && diem <= 10){
+            document.writeln("Bạn đạt loại A");
+        }
+        else{
+            document.writeln("Điểm không hợp lệ");
+        }
+
+    </script>
+    <!-- External JavaScript -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
