@@ -1,0 +1,46 @@
+main{
+    display: flex;
+}
+.trai{
+    width: 75%;
+    height: 500px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.phai{
+    width: 25%;
+    border:1px solid gray; 
+    border-radius:10px;
+    /* height: 500px; */
+    background-color: rgb(243, 241, 241);
+}
+.video{
+    width: 90%;
+    height: 450px;
+    background-color: #080000;
+    border-radius: 20px;
+}
+.bai-hat:hover{
+    width: 95%;
+    height: 100px;
+    margin: auto;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+}
+.bai-hat:hover{
+    background-color: rgb(255, 255, 255);
+}   
+img{
+    width: 25%;
+    margin-right: 10px;
+}
+p{
+    width: 75%;
+}
+h1{
+    text-align: center;
+}

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9 - JS</title>
+</head>
+<body>
+    
+    
+    <div>
+        họ và tên : <input type="text" id="hoTen" name="hoTen">
+        <button onclick="xinchao()">Gửi</button>
+    </div>
+    <div>
+        <button onclick="xinchao2('duong',21)">xin chào</button>
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính tổng</button>
+    </div>
+    <h1>tính tổng</h1>
+    <div>
+        số thứ 1 : <input type="number" id="soThuNhat">
+    </div>
+    <div>
+        số thứ 2 : <input type="number" id="soThuHai">
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính tổng</button>
+ 
+    </div>
+    <div>
+        kết quả : <input type="text" id="tong">
+
+    </div>
+    <script>
+        // function
+        // để tạo function dùng cú pháp
+        // 1:hàm không có tham số
+        // function ten(){}
+
+        // bài tập tính tổng 
+        function tinhTong() {
+            var soThuNhat = document.getElementById("soThuNhat").value;
+            var soThuHai = document.getElementById("soThuHai").value;
+            var tong = parseInt(soThuNhat) + parseInt(soThuHai);
+            document.getElementById("tong").value = tong;
+        }   
+        function xinChao() {
+            document.writeln("Xin chào!");
+        }
+
+        // gọi hàm
+        xinChao();
+
+
+        // 2: hàm có tham số
+        // function = ten(tham số,){}
+        // Lưu ý : các tham số ngăn cách nhau bằng dấu phẩy)
+        function xinChao2(ten) {
+            document.writeln("Xin chào " + ten);
+        }
+
+        xinChao2("duong");
+
+        function xinchao3(ten, tuoi) {
+            document.writeln("<br>Xin chào " + ten + "  " + tuoi);
+        }
+
+        xinchao3("duong", 21);
+
+        // tạm hàm tính chu vi hình chữ nhật
+        function chuViHinhChuNhat(dai, rong){
+            var chuVi = (dai + rong) * 2;
+            document.writeln("<br>Chu vi hình chữ nhật : " + chuVi);
+        }
+
+        chuViHinhChuNhat(10, 5);
+        var danhsachsinhvien = ["duong1", "duong2", "duong3", "duong4", "duong5"];
+        // dùng for in ra xin chào từng tên trong mảng
+        for (var i = 0; i < danhsachsinhvien.length; i++) {
+            document.writeln("<br>Xin chào " + danhsachsinhvien[i]);
+           
+        }
+         // in ra xin chào những người không có tên là duong3
+        for (var i = 0; i < danhsachsinhvien.length; i++) {
+            if (danhsachsinhvien[i] != "duong3") {
+                document.writeln("<br>Xin chào " + danhsachsinhvien[i]);
+            }
+        }
+        // hàm có 2 tham số
+        //danh sách sinh viên , tên sinh viên cần tìm
+        //đầu ra : nếu có thì in ra có sinh viên / nếu k : không có sinh viên
+        function timSinhVien(danhsachsinhvien, ten) {
+            var ketQua = "Không có sinh viên";
+            for (var i = 0; i < danhsachsinhvien.length; i++) {
+                if (danhsachsinhvien[i] == ten) {
+                    ketQua = "Có sinh viên";
+                    break;
+                }
+            }
+            document.writeln("<br>" + ketQua);
+        }
+        // gọi hàm tìm sinh viên
+        timSinhVien(danhsachsinhvien, "duong3");
+        timSinhVien(danhsachsinhvien, "duong6");
+
+    </script>
+</body>
+</html>

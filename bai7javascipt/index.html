@@ -236,6 +236,40 @@
             document.writeln("Điểm không hợp lệ");
         }
 
+        // var thongtinsinhvien = {
+        //     ten: "duong",
+        //     tuoi: 21,
+        //     diaChi: { tp: "Ha Noi" 
+        //               phuong : "Cau Giay"
+        //               duong : "Tran Duy Hung"
+        //     },
+        //     gioiTinh: "Nam"
+        
+        var thongtinphim = {
+            ten: "Avengers: Endgame",
+            namSX: 2019,
+            daoDien: "Joe Russo",
+            dienVien: ["Robert Downey Jr.", "Chris Evans", "Mark Ruffalo", "Chris Hemsworth"]
+        }
+        var thongtinsv = [thuy, duong, duc, tuan];
+        document.writeln("<br>");
+        document.writeln('Tên sinh viên: ' + thongtinsinhvien.ten + '<br>');
+        for (var i = 0; i < thongtinphim.dienVien.length; i++) {
+            document.writeln('Diễn viên: ' + thongtinphim.dienVien[i] + '<br>');
+        }
+        //comfim bóe
+        var r = confirm("Bạn có muốn tiếp tục không?");
+        if (r == true) {
+            document.writeln("Bạn đã chọn tiếp tục");
+        } else {
+            document.writeln("Bạn đã chọn hủy");
+        } 
+        // promt
+         var r = prompt("Nhập vào họ tên:", " nhập tên vào đây");
+        document.writeln(r)
+
+
+
     </script>
     <!-- External JavaScript -->
     <!-- <script src="script.js"></script> -->
