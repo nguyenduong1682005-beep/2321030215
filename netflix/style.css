@@ -1,23 +1,31 @@
 body {
     background-color: #1C1B20;
-    color: #BCBBBF;
+    color: white;
+    margin: 0;
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 20px;
+    align-items: center;
+}
 .danh-sach-muc {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 30px;
+    padding: 0;
 }
 
 .lien-ket-muc {
     text-decoration: none;
-    color: white;
+    color: #BCBBBF;
 }
 
 .muc {
-    padding: 10px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .dang-chon {
@@ -26,57 +34,71 @@ body {
 }
 
 .logo {
-    width: 100px;
-    height: auto;
+    width: 5%;
 }
 
 .avata {
-    width: 40px;
+    width: 50px;
     border-radius: 10px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
+.muc:hover{
+    background-color: grey;
 }
-
 .banner {
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
+    width: 90%;
+    margin: 20px auto;
 }
 
 .banner-img {
     width: 100%;
     border-radius: 20px;
-    height: 400px;
+    height: 440px;
 }
 
 .the-loai {
     width: 95%;
-    height: 20vh;
     margin: 10px auto;
 }
 
 .danh-sach-phim {
     display: flex;
     justify-content: space-between;
-    margin: auto;
 }
 
 .phim {
     width: 19%;
-    height: 20vh;
-    .anh-phim {
+    /* height: 20vh; */
+    img{
         width: 100%;
-        height: 20vh;
-        object-fit: cover;
-        border-radius: 10px;
+        border-radius: 20px;
     }
-    .anh-nv {
+}
+
+.nhan-vat{
+    width: 30%;
+    gap: 10px;
+    img{
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
-        width: 60%;
-        height: 15vh;
-        object-fit: cover;
     }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: flex-end;
+}
+.mo-ta{
+    margin: 0 300px 0 220px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.noi-dung-mo-ta{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
 }
